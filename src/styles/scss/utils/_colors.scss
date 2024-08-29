@@ -1,0 +1,39 @@
+@use "../common" as *;
+@use "../helper" as *;
+
+
+// Color-Generator
+@each $color in $colors {
+    @include colorGenerator($color);
+}
+
+// Background-Color-Generator
+@each $color in $bgColors {
+    @include bgColorGenerator($color);
+}
+
+// colors
+.primary {
+    color: $blue-3ca;
+  }
+  .bg_primary {
+    background-color: $blue-3ca;
+  }
+  .txt_primary {
+    color: $grey-434;
+  }
+  // Error-Msg
+  .error-msg {
+    @include fontstyle(12px, 500, red);
+  }
+  .outline-0 {
+    outline: none !important;
+  }
+  // list-style-none
+  .list-none {
+    list-style: none;
+  }
+  // background-transparent
+  .bg-transparent {
+    background-color: transparent;
+  }

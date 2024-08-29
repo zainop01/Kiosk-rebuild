@@ -1,0 +1,76 @@
+@use "../common" as *;
+@use "../helper" as *;
+
+
+
+.button {
+    @extend %borderOutline;
+    letter-spacing: 0.5px;
+    transition: 0.4s linear all;
+    text-transform: capitalize;
+  }
+  
+  .btn {
+    // sizes
+    &_lg {
+      height: 4.4rem;
+    //   text-align: center;
+    //   width: 18.3rem;
+      padding: 0px 35px;
+      border-radius: 50px;
+      @include fontstyle(14px, 600, auto);
+      i {
+        font-size: 20px;
+        margin-right: 12px;
+        margin-bottom: 5px;
+      }
+    }
+    &_md {
+      height: 3.7rem;
+      padding: 0px 15px;
+      border-radius: 50px;
+      @include fontstyle(12px, 600, auto);
+      i {
+        font-size: 18px;
+        margin-right: 5px;
+        margin-bottom: 5px;
+      }
+    }
+    &_sm {
+      height: 2.5rem;
+      padding: 0px 10px;
+      border-radius: 4px;
+      @include fontstyle(12px, 600, auto);
+      i {
+        font-size: 13px;
+        margin-right: 5px;
+      }
+    }
+  }
+  
+  // primary-btn-fill
+  .btn_primary.btn_fill {
+    background-color:  $blue-3ca;
+    color: $white;
+    &:hover {
+      background-color: $blue-238;
+    }
+  }
+  // primary-btn-outlined
+  .btn_primary.btn_outline {
+    background-color: $white;
+    color: $blue-3ca;
+    border: 1px solid $blue-084;
+    &:hover {
+      @include hover($white, $blue-3ca);
+    }
+  }
+//   // secondary-btn-fill
+//   .btn_secondary.btn_fill {
+//     background-color: $blue-medium;
+//     color: $white;
+//     &:hover {
+//       background-color: $blue-dark ;
+//     }
+//   }
+  
