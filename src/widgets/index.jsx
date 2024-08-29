@@ -123,7 +123,7 @@ const Widgets = () => {
       <h1 className="mb-5">
         <u>4 - Table</u>
       </h1>
-      <Table theading={StaticData.testTableHead}>
+      <Table theading={StaticData.testTableHead} minWidth='1000px'>
         <tr>
           <td>Group 1</td>
           <td>10</td>

@@ -1,10 +1,9 @@
 import React from "react";
 
-export default function Table({ theading, children }) {
+export default function Table({ theading, children, minWidth }) {
   return (
-    <>
     <div className="table-container">
-      <table>
+      <table style={{ minWidth: minWidth }}>
         <thead>
           <tr>
             {theading?.map((val, index) => (
@@ -14,7 +13,6 @@ export default function Table({ theading, children }) {
         </thead>
         <tbody>{children}</tbody>
       </table>
-      </div>
-    </>
+    </div>
   );
 }
