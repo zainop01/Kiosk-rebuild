@@ -13,11 +13,12 @@
   .btn {
     // sizes
     &_lg {
-      height: 4.4rem;
+      height: 44px;
     //   text-align: center;
     //   width: 18.3rem;
       padding: 0px 35px;
       border-radius: 50px;
+      letter-spacing: 1px;
       @include fontstyle(14px, 600, auto);
       i {
         font-size: 20px;
@@ -26,7 +27,8 @@
       }
     }
     &_md {
-      height: 3.7rem;
+      letter-spacing: 1px;
+      height: 37px;
       padding: 0px 15px;
       border-radius: 50px;
       @include fontstyle(12px, 600, auto);
@@ -37,7 +39,8 @@
       }
     }
     &_sm {
-      height: 2.5rem;
+      letter-spacing: 1px;
+      height: 25px;
       padding: 0px 10px;
       border-radius: 4px;
       @include fontstyle(12px, 600, auto);

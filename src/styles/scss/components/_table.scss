@@ -26,14 +26,6 @@
         i {
           font-size: 16px;
         }
-        // Target the first and third td elements
-        td:nth-child(1),
-        td:nth-child(3) {
-          color: #2B3674;
-        }
-        td:nth-child(4) {
-            color: $blue-3ca;
-          }
       }
       td {
         @include fontstyle(16px, 500, $grey-434);

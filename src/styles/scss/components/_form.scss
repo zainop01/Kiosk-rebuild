@@ -6,15 +6,12 @@
   label {
     text-transform: capitalize;
   }
-  //   large-label
   label.lg {
     @include fontstyle(16px, 600, $grey-434);
   }
-  //   meduim-label
   label.md {
     @include fontstyle(15px, 600, $grey-434);
   }
-  //   small-label
   label.sm {
     @include fontstyle(13px, 600, $grey-434);
   }
@@ -30,38 +27,50 @@
 
 // Text-and-Password-Input-Fields-start
 .input-field-wrapper {
-  .input-wrapper {
-    position: relative;
-    .input {
-      width: 100%;
-      height: 50px;
-      background: #ffffff;
-    //   box-shadow: 0px 4px 7px rgba(113, 113, 113, 0.25);
-    border-radius: 16px;
-    border: 1px solid #E0E5F2;
-      outline: none;
-      padding: 0px 40px 0px 13px;
-      @include fontstyle(14px, 500, $grey-434);
-      &.danger {
-        background-color: rgb(255, 227, 227);
-        border: 1px solid red;
-      }
-      &.success {
-        background-color: rgb(245, 255, 231);
-        border: 1px solid greenyellow;
-      }
-      &.danger:focus {
-        box-shadow: rgb(255, 192, 192);
-      }
-      &.success:focus {
-        box-shadow: rgb(235, 255, 206);
+  &.normal {
+    .input-wrapper {
+      position: relative;
+      .input {
+        width: 100%;
+        height: 50px;
+        background: #ffffff;
+        border-radius: inherit;
+        border: 1px solid #E0E5F2;
+        outline: none;
+        padding: 25px;
+        @include fontstyle(14px, 500, $grey-434);
       }
     }
-    i.danger {
-      color: red;
-    }
-    i.success {
-      color: greenyellow;
+  }
+
+  &.search {
+    .input-wrapper {
+      position: relative;
+
+      .input {
+        width: 100%;
+        height: 44px;
+        background: #F4F7FE;
+        border-radius: inherit;
+        border: none;
+        outline: none;
+        padding-left: 55px; 
+        padding-right: 15px; 
+        @include fontstyle(14px, 400, $grey-434);
+        &::placeholder {
+          color: #aaa;
+        }
+      }
+
+      .search-icon {
+        position: absolute;
+        top: 50%;
+        left: 25px; 
+        transform: translateY(-50%);
+        font-size: 15px;
+        color: $grey-434;
+        pointer-events: none;
+      }
     }
   }
 }

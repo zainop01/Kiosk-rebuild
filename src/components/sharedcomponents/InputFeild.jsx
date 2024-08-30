@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { Field, ErrorMessage } from "formik";
-
-// Importing required icons from react-icons
-import { BsEye, BsEyeSlash, BsCheck2Square } from "react-icons/bs";
+import { BsEye, BsEyeSlash, BsCheck2Square, BsSearch } from "react-icons/bs";
 import { MdNotInterested } from "react-icons/md";
 
 export default function InputField({
@@ -25,12 +23,16 @@ export default function InputField({
   max,
   step,
   readOnly,
+  variant = "normal",
+  classes,
+  borderRadius = "16px",
 }) {
   const [showPassword, setShowPassword] = useState(false);
+
   return (
     <>
       <div className={`${margin}`}>
-        <div className="input-field-wrapper">
+        <div className={`input-field-wrapper ${variant}`}>
           {label && (
             <label
               htmlFor={`${type}_${name}`}
@@ -39,7 +41,12 @@ export default function InputField({
               {label}
             </label>
           )}
-          <div className={`${size} input-wrapper`}>
+          <div className={`input-wrapper`}>
+            {type === "search" && (
+              <i className="search-icon">
+                <BsSearch />
+              </i>
+            )}
             {behave === "formik" ? (
               <Field
                 type={showPassword ? "text" : type}
@@ -47,12 +54,8 @@ export default function InputField({
                 placeholder={placeholder}
                 disabled={disabled}
                 id={`${type}_${name}`}
-                className={`input ${
-                  formik.errors?.[name] && formik.touched?.[name]
-                    ? "danger"
-                    : formik.touched?.[name] && "success"
-                }`}
-                style={styles}
+                className={`input ${classes}`}
+                style={{ ...styles, borderRadius }}
                 min={min}
                 max={max}
                 step={step}
@@ -66,7 +69,7 @@ export default function InputField({
                 onChange={onChange}
                 value={value}
                 className={`input`}
-                style={styles}
+                style={{ ...styles, borderRadius }}
                 defaultValue={defaultValue}
                 disabled={disabled}
                 readOnly={readOnly}
@@ -84,23 +87,13 @@ export default function InputField({
               >
                 {showPassword ? <BsEye /> : <BsEyeSlash />}
               </i>
-            ) : formik?.errors?.[name] && formik?.touched?.[name] ? (
-              <i className="danger">
-                <MdNotInterested />
-              </i>
             ) : (
-              formik?.touched?.[name] && (
-                <i className="success">
-                  <BsCheck2Square />
-                </i>
-              )
+              ''
             )}
           </div>
         </div>
-        {formik ? (
+        {formik && (
           <ErrorMessage name={name} component="h6" className="error-msg mt-2" />
-        ) : (
-          ""
         )}
       </div>
     </>
