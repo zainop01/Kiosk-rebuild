@@ -12,7 +12,6 @@ export default function ToggleSwitch({ checked = false, onChange, label }) {
 
   return (
     <div className="toggle-switch">
-      {/* {label && <span className="toggle-label">{label}</span>} */}
       <label className="switch">
         <input type="checkbox" checked={isChecked} onChange={handleToggle} />
         <span className="slider round"></span>

@@ -47,50 +47,219 @@ const Widgets = () => {
   };
   return (
     <>
-      <div className="p-5">
-        <h1 className="text-center fw-bold primary">Components</h1>
-        <hr />
+      <div className="mb-5">
+        <h1 className="text-center fw-bold primary my-5">Kiosk Components</h1>
         <Accordion defaultActiveKey="0">
           <Accordion.Item eventKey="0">
             <Accordion.Header>Buttons</Accordion.Header>
             <Accordion.Body>
-              <div className="d-flex gap-5">
+              <div className="d-flex gap-5 mb-4">
                 <div>
-                  <p>Large Btn without Icon</p>
-                  <Button type="button" classes="my-3">
-                    Large Button
-                  </Button>
+                  <small>Large Btn without Icon</small>
+                  <Button type="button">Large Button</Button>
                 </div>
                 <div>
-                  <p>Large Btn With Icon</p>
+                  <small>Large Btn With Icon</small>
                   <Button type="button" startIcon={<CiCalendar />}>
                     Large btn
                   </Button>
                 </div>
+
                 <div>
-                  <p>Large Btn Outline</p>
-                  <Button type="button" variant="outline">
-                    Previous
-                  </Button>
-                </div>
-                <div>
-                  <p>Medium Btn With Icon</p>
+                  <small>Medium Btn With Icon</small>
                   <Button type="button" size="md" startIcon={<CiCalendar />}>
                     Medium btn
                   </Button>
                 </div>
                 <div>
-                  <p>Medium Btn Without Icon</p>
+                  <small>Medium Btn Without Icon</small>
                   <Button type="button" size="md">
                     Medium btn
                   </Button>
                 </div>
+              </div>
+              <div className="d-flex gap-5">
                 <div>
-                  <p>Medium Btn Outline</p>
+                  <small>Large Btn Outline</small>
+                  <Button type="button" variant="outline">
+                    Previous
+                  </Button>
+                </div>
+                <div>
+                  <small>Medium Btn Outline</small>
                   <Button type="button" variant="outline" size="md">
                     Previous
                   </Button>
                 </div>
+              </div>
+              <div class="my-5">
+                <h1 class="mb-4">Button Component Documentation</h1>
+
+                <p>
+                  The <code>Button</code> component is a reusable UI element
+                  that allows developers to create buttons with various styles,
+                  sizes, and icons. Below is a quick guide to the available
+                  props:
+                </p>
+
+                <table class="table table-bordered">
+                  <thead class="table-light">
+                    <tr>
+                      <th>Prop</th>
+                      <th>Type</th>
+                      <th>Default</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <code>children</code>
+                      </td>
+                      <td>ReactNode</td>
+                      <td>-</td>
+                      <td>
+                        Content inside the button, usually text or elements like
+                        icons.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <code>type</code>
+                      </td>
+                      <td>string</td>
+                      <td>
+                        <code>"button"</code>
+                      </td>
+                      <td>
+                        Defines the button type (<code>"button"</code>,{" "}
+                        <code>"submit"</code>, <code>"reset"</code>).
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <code>size</code>
+                      </td>
+                      <td>string</td>
+                      <td>
+                        <code>"lg"</code>
+                      </td>
+                      <td>
+                        Adjusts the button size. Available options might include{" "}
+                        <code>"sm"</code>, <code>"md"</code>, and{" "}
+                        <code>"lg"</code>.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <code>variant</code>
+                      </td>
+                      <td>string</td>
+                      <td>
+                        <code>"fill"</code>
+                      </td>
+                      <td>
+                        Sets the button style variant. Options might include{" "}
+                        <code>"fill"</code>, <code>"outline"</code>, etc.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <code>btn</code>
+                      </td>
+                      <td>string</td>
+                      <td>
+                        <code>"primary"</code>
+                      </td>
+                      <td>
+                        Specifies the button's color scheme. Examples:{" "}
+                        <code>"primary"</code>, <code>"secondary"</code>,{" "}
+                        <code>"danger"</code>.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <code>startIcon</code>
+                      </td>
+                      <td>ReactNode</td>
+                      <td>-</td>
+                      <td>
+                        Adds an icon at the start of the button. Example usage:{" "}
+                        <code>
+                          &lt;Button startIcon=&lt;YourIcon /&gt; /&gt;
+                        </code>
+                        .
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <code>align</code>
+                      </td>
+                      <td>string</td>
+                      <td>
+                        <code>"me-auto"</code>
+                      </td>
+                      <td>
+                        Controls the alignment of the button content within a
+                        flex container. Typically used for adjusting layout in
+                        flexbox-based designs.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <code>onClick</code>
+                      </td>
+                      <td>function</td>
+                      <td>-</td>
+                      <td>Event handler for the button click event.</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <code>classes</code>
+                      </td>
+                      <td>string</td>
+                      <td>-</td>
+                      <td>
+                        Additional custom CSS classes for further styling.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <code>title</code>
+                      </td>
+                      <td>string</td>
+                      <td>-</td>
+                      <td>Adds a tooltip text that appears on hover.</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <code>disabled</code>
+                      </td>
+                      <td>boolean</td>
+                      <td>
+                        <code>false</code>
+                      </td>
+                      <td>
+                        Disables the button if set to <code>true</code>.
+                        Disabled buttons also have a strikethrough effect.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <code>styles</code>
+                      </td>
+                      <td>object</td>
+                      <td>-</td>
+                      <td>Inline styles to apply directly to the button.</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <p class="mt-4">
+                  This documentation should help developers quickly understand
+                  how to use and customize the <code>Button</code> component in
+                  their projects.
+                </p>
               </div>
             </Accordion.Body>
           </Accordion.Item>
@@ -100,7 +269,7 @@ const Widgets = () => {
               <div>
                 <Typography
                   fw="bold"
-                  variant="typography-xl"
+                  variant="heading-xl"
                   color="txt-primary"
                 >
                   Heading One - 40PX
@@ -109,7 +278,7 @@ const Widgets = () => {
               <div>
                 <Typography
                   fw="bold"
-                  variant="typography-lg"
+                  variant="heading-lg"
                   color="txt-primary"
                 >
                   Heading Two - 34PX
@@ -119,7 +288,7 @@ const Widgets = () => {
                 <Typography
                   fw="semibold"
                   color="txt_primary"
-                  variant="typography-md"
+                  variant="heading-md"
                 >
                   Heading Three - 26PX
                 </Typography>
@@ -127,7 +296,7 @@ const Widgets = () => {
               <div>
                 <Typography
                   fw="bold"
-                  variant="typography-sm"
+                  variant="heading-sm"
                   color="txt_primary"
                 >
                   Heading Four - 16PX
@@ -136,7 +305,7 @@ const Widgets = () => {
               <div>
                 <Typography
                   fw="bold"
-                  variant="typography-xs"
+                  variant="heading-xs"
                   color="txt_primary"
                 >
                   Heading Five - 14PX
@@ -145,14 +314,14 @@ const Widgets = () => {
               <div>
                 <Typography
                   fw="bold"
-                  variant="typography-xxs"
+                  variant="heading-xxs"
                   color="txt_primary"
                 >
                   Heading Six - 12PX
                 </Typography>
               </div>
               <div>
-                <Typography variant="typography-p1" color="txt_primary">
+                <Typography variant="body-1" color="txt_primary">
                   (Body One 16px) Lorem ipsum dolor sit, amet consectetur
                   adipisicing elit. Modi soluta mollitia nihil itaque possimus,
                   eligendi illo distinctio, excepturi, quo quidem illum nam
@@ -164,7 +333,7 @@ const Widgets = () => {
                 </Typography>
               </div>
               <div>
-                <Typography variant="typography-p2" color="txt_primary">
+                <Typography variant="body-2" color="txt_primary">
                   (Body Two 14px) Lorem ipsum dolor sit, amet consectetur
                   adipisicing elit. Modi soluta mollitia nihil itaque possimus,
                   eligendi illo distinctio, excepturi, quo quidem illum nam
@@ -176,7 +345,7 @@ const Widgets = () => {
                 </Typography>
               </div>
               <div>
-                <Typography variant="typography-p3" color="txt_primary">
+                <Typography variant="body-3" color="txt_primary">
                   (Body Three 12px) Lorem ipsum dolor sit, amet consectetur
                   adipisicing elit. Modi soluta mollitia nihil itaque possimus,
                   eligendi illo distinctio, excepturi, quo quidem illum nam
@@ -232,7 +401,7 @@ const Widgets = () => {
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="4">
-            <Accordion.Header>Input Feilds</Accordion.Header>
+            <Accordion.Header>Forms</Accordion.Header>
             <Accordion.Body>
               <Formik
                 initialValues={initialValues}
@@ -244,9 +413,18 @@ const Widgets = () => {
                     <div className="row">
                       <div className="col-4">
                         <InputField
-                          label="Normal"
+                          label="Name"
                           name="exampleOne"
                           variant="normal"
+                          formik={formik}
+                        />
+                      </div>
+                      <div className="col-4">
+                        <InputField
+                          label="Password"
+                          name="exampleOne"
+                          variant="normal"
+                          type="password"
                           formik={formik}
                         />
                       </div>
@@ -291,11 +469,9 @@ const Widgets = () => {
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="7" className="w-100">
-            <Accordion.Header>Top Nav</Accordion.Header>
+            <Accordion.Header>Utilities Classes</Accordion.Header>
             <Accordion.Body>
-              <TopNav
-              // kioskName="Sephona"
-              />
+          
             </Accordion.Body>
           </Accordion.Item>
         </Accordion>

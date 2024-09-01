@@ -1,80 +1,41 @@
 @use "../common" as *;
 
-
-.typography-xl {
+.heading-xl {
     font-size: $font-size-xl;
     font-weight: $display1-weight;
     line-height: $line-height-base;
 }
 
-.typography-lg {
+.heading-lg {
     font-size: $font-size-lg;
     font-weight: $display1-weight;
 }
 
-.typography-md {
+.heading-md {
     font-size: $font-size-md;
 }
 
-.typography-sm {
+.heading-sm {
     font-size: $font-size-sm;
 }
 
-.typography-xs {
+.heading-xs {
     font-size: $font-size-xs;
 }
 
-.typography-xxs {
+.heading-xxs {
     font-size: $font-size-xxs;
 }
 
-.typography-p1 {
+.body-1 {
     font-size: $font-size-sm;
 }
-.typography-p2 {
+.body-2 {
     font-size: $font-size-xs;
 }
-.typography-p3 {
+.body-3 {
     font-size: $font-size-xxs;
 }
-.typography-label {
+.label-1 {
     font-size: $font-size-xs;
 }
-
-
-// Font-Sizes-in-Rem-Classess
-// @each $size in $fonts-rem {
-//     .f-#{str-slice(#{$size},
-//     0,
-//     1)+str-slice(#{$size}, -1)
-// }
-
-// -rem {
-//     font-size: #{$size}+"rem";
-// }
-// }
-
-// // Font-Sizes-in-PeXel-Classess
-// @each $size in $font-px {
-//     .f-#{$size}-px {
-//         font-size: #{$size}+"px";
-//     }
-// }
-
-// @font-face {
-//     font-family: "ArticulatCF-Regular";
-//     src: url("../../../assets/fonts/ArticulatCF-Regular.otf") format("opentype");
-//     /* Additional font styles */
-//   }
-  
-//   @font-face {
-//     font-family: "ArticulatCF-Bold";
-//     src: url("../../../assets/fonts/ArticulatCF-Bold.otf") format("opentype");
-//     /* Additional font styles */
-//   }
-  
-//   @font-face {
-//     font-family: "ArticulatCF-Medium";
-//     src: url("../../../assets/fonts/ArticulatCF-Medium.otf") format("opentype");
-//     /* Additional font styles */
-//   }
