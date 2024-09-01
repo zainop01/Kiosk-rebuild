@@ -63,7 +63,7 @@
   .btn_primary.btn_outline {
     background-color: $white;
     color: $blue-3ca;
-    border: 1px solid $blue-084;
+    border: 1px solid $blue-3ca;
     &:hover {
       @include hover($white, $blue-3ca);
     }

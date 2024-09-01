@@ -68,6 +68,12 @@ const Widgets = () => {
                   </Button>
                 </div>
                 <div>
+                  <p>Large Btn Outline</p>
+                  <Button type="button" variant="outline">
+                    Previous
+                  </Button>
+                </div>
+                <div>
                   <p>Medium Btn With Icon</p>
                   <Button type="button" size="md" startIcon={<CiCalendar />}>
                     Medium btn
@@ -77,6 +83,12 @@ const Widgets = () => {
                   <p>Medium Btn Without Icon</p>
                   <Button type="button" size="md">
                     Medium btn
+                  </Button>
+                </div>
+                <div>
+                  <p>Medium Btn Outline</p>
+                  <Button type="button" variant="outline" size="md">
+                    Previous
                   </Button>
                 </div>
               </div>
@@ -240,7 +252,16 @@ const Widgets = () => {
                       </div>
                       <div className="col-4">
                         <h6>Search Bar</h6>
-                     <SearchBar placeholder="Search" borderRadius="30px"/>
+                        <SearchBar placeholder="Search" borderRadius="30px" />
+                      </div>
+                      <div className="col-4">
+                        <InputField
+                          label="Togler"
+                          name="Toggler"
+                          isToggle={true}
+                          value={true} // or formik.values.kiosk if using Formik
+                          onChange={(checked) => console.log(checked)}
+                        />
                       </div>
                     </div>
                   </Form>
@@ -273,14 +294,11 @@ const Widgets = () => {
             <Accordion.Header>Top Nav</Accordion.Header>
             <Accordion.Body>
               <TopNav
-                // kioskName="Sephona"
+              // kioskName="Sephona"
               />
             </Accordion.Body>
           </Accordion.Item>
-        
         </Accordion>
-
-    
       </div>
     </>
   );
