@@ -1,0 +1,105 @@
+@use "../common" as *;
+@use "../helper" as *;
+
+.side-nav {
+    // border: 1px solid red;
+  width: 300px;
+  height: calc(100vh - 13%);
+  background-color: #fff;
+  padding: 20px 15px;
+  box-shadow: 13.776px 16.728px 39.36px 3.936px rgba(112, 144, 176, 0.08);
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  top: 11%;
+  left: 1%;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  ::-webkit-scrollbar {
+    width: 6px; 
+    height: 6px; 
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2); 
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent; /* Invisible track */
+  }
+
+  /* Hide scrollbar initially */
+  &::-webkit-scrollbar {
+    opacity: 0;
+  }
+
+  /* Show scrollbar on scroll */
+  &:hover::-webkit-scrollbar {
+    opacity: 1;
+  }
+}
+
+.active-class {
+  background-color: $blue-3ca;
+  color: white !important;
+
+  i {
+    color: white !important;
+  }
+}
+
+.profile-section {
+    // text-align: center;
+    margin-bottom: 2rem;
+    // padding-top: 2rem; // Optional: Adds some space at the top
+
+    .profile-image {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-bottom: 0.5rem;
+      margin-right: 1rem;
+    }
+
+    .profile-name {
+      font-weight: bold;
+      font-size: $font-size-xs;
+      color: $grey-434;
+    }
+
+    .profile-role {
+      font-size: 0.85rem;
+      font-size: $font-size-xxs;
+      color: $blue-3ca;
+    }
+  }
+
+.menu-items {
+  flex-grow: 1;
+  color: $grey-434;
+
+  .menu-item {
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0.4rem 1.5rem;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+
+    &:hover {
+      // Add hover effects if needed
+    }
+
+    i {
+      margin-right: 10px;
+      margin-bottom: 4px;
+      color: $blue-3ca;
+    }
+  }
+}

@@ -1,76 +1,57 @@
 @use "../common" as *;
 @use "../helper" as *;
 
-.input-field-wrapper,
-.select-box-wrapper {
+.input-field-wrapper {
   label {
     text-transform: capitalize;
   }
+  
   label.lg {
-    @include fontstyle(16px, 600, $grey-434);
+    @include fontstyle($font-size-sm, $display2-weight, $grey-434);
   }
+  
   label.md {
-    @include fontstyle(15px, 600, $grey-434);
+    @include fontstyle(15px, $display2-weight, $grey-434); 
   }
+  
   label.sm {
-    @include fontstyle(13px, 600, $grey-434);
+    @include fontstyle(13px, $display2-weight, $grey-434); 
   }
+  
   i {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: 13px;
-    font-size: 18px;
+    right: 13px; 
+    font-size: 18px; 
     color: $grey-434;
   }
 }
 
-// Text-and-Password-Input-Fields-start
 .input-field-wrapper {
   &.normal {
     .input-wrapper {
       position: relative;
+      
       .input {
-        width: 100%;
-        height: 50px;
-        background: #ffffff;
-        border-radius: inherit;
+        @include input(
+          100%, 
+          50px, 
+          inherit, 
+          #ffffff, 
+          $grey-434, 
+          25px,
+          $font-size-xs, 
+          $display3-weight
+        );
         border: 1px solid #E0E5F2;
-        outline: none;
-        padding: 25px;
-        @include fontstyle(14px, 500, $grey-434);
       }
     }
   }
+}
 
-  &.search {
-    .input-wrapper {
-      position: relative;
-
-      .input {
-        width: 100%;
-        height: 44px;
-        background: #F4F7FE;
-        border-radius: inherit;
-        border: none;
-        outline: none;
-        padding-left: 55px; 
-        padding-right: 15px; 
-        @include fontstyle(14px, 400, $grey-434);
-        &::placeholder {
-          color: #aaa;
-        }
-      }
-
-      .search-icon {
-        position: absolute;
-        top: 50%;
-        left: 25px; 
-        transform: translateY(-50%);
-        font-size: 15px;
-        color: $grey-434;
-        pointer-events: none;
-      }
-    }
-  }
+.error-msg {
+  color: red;
+  font-size: 12px; // Retained in px (below 20px)
+  margin-top: 5px; // Retained in px (below 20px)
 }

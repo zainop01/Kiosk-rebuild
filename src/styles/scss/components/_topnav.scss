@@ -1,0 +1,80 @@
+@use "../common" as *;
+@use "../helper" as *;
+
+.top-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9rem 1.25rem;
+  background-color: #fff;
+  filter: drop-shadow(14px 17px 40px rgba(0, 0, 0, 0.10));
+  position: fixed;
+  width: 100%;
+  .brand {
+    display: flex;
+    align-items: center;
+
+    .logo {
+      width: 20rem;
+    }
+
+    .brand-name {
+      margin-left: 0.625rem;
+      font-size: $font-size-lg;
+      font-weight: $display2-weight;
+      color: #333;
+    }
+  }
+
+  .nav-icons {
+    display: flex;
+    align-items: center;
+
+    .icon {
+      margin-left: 1.25rem;
+      color: #d9d9d9;
+      cursor: pointer;
+    }
+
+    .profile-image {
+      width: 2.1875rem;
+      height: 2.1875rem;
+      border-radius: $border-radius-circle;
+      margin-left: 0.9375rem;
+      cursor: pointer;
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    .brand {
+      width: 100%;
+      justify-content: center;
+    }
+
+    .nav-icons {
+      width: 100%;
+      margin-top: 0.5rem;
+      justify-content: space-between;
+      order: 2;
+
+      .icon,
+      .profile-image {
+        margin-left: 0.75rem;
+      }
+
+      div {
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+
+        .search-input {
+          width: 100%;
+          max-width: 300px;
+        }
+      }
+    }
+  }
+}

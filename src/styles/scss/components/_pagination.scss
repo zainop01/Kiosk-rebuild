@@ -1,10 +1,13 @@
+@use "../common" as *;
+@use "../helper" as *;
+
 .custom-pagination {
   display: flex;
   align-items: center;
   font-size: 14px;
 
   .pagination-info {
-    margin-right: 10px;
+    margin-right: 10px; 
     color: #333;
   }
 
@@ -21,13 +24,12 @@
       .page-link {
         display: block;
         padding: 0;
-        margin: 0 5px;
+        margin: 0 5px; 
         color: #333;
         background-color: transparent;
         border: none;
         cursor: pointer;
-        font-size: 18px;
-
+        font-size: 18px; 
         &:hover {
           color: #000;
           text-decoration: none;

@@ -14,6 +14,9 @@ import * as Yup from "yup";
 import Accordion from "react-bootstrap/Accordion";
 import Pagination from "../components/sharedcomponents/Pagination";
 import RowsPerPage from "../components/sharedcomponents/RowsPerPage";
+import TopNav from "../components/TopNav";
+import SearchBar from "../components/sharedcomponents/SearchBar";
+import SideNav from "../components/SideNav";
 
 const Widgets = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -236,14 +239,8 @@ const Widgets = () => {
                         />
                       </div>
                       <div className="col-4">
-                        <InputField
-                          label="Search Bar"
-                          type="search"
-                          placeholder="Search here..."
-                          name="search"
-                          variant="search"
-                          borderRadius="30px"
-                        />
+                        <h6>Search Bar</h6>
+                     <SearchBar placeholder="Search" borderRadius="30px"/>
                       </div>
                     </div>
                   </Form>
@@ -255,10 +252,10 @@ const Widgets = () => {
             <Accordion.Header>Pagiation</Accordion.Header>
             <Accordion.Body>
               <Pagination
-              currentPage={currentPage}
-              totalItems={totalItems}
-              itemsPerPage={itemsPerPage}
-              onPageChange={handlePageChange}
+                currentPage={currentPage}
+                totalItems={totalItems}
+                itemsPerPage={itemsPerPage}
+                onPageChange={handlePageChange}
               />
             </Accordion.Body>
           </Accordion.Item>
@@ -272,9 +269,18 @@ const Widgets = () => {
               />
             </Accordion.Body>
           </Accordion.Item>
+          <Accordion.Item eventKey="7" className="w-100">
+            <Accordion.Header>Top Nav</Accordion.Header>
+            <Accordion.Body>
+              <TopNav
+                // kioskName="Sephona"
+              />
+            </Accordion.Body>
+          </Accordion.Item>
+        
         </Accordion>
 
-        <hr />
+    
       </div>
     </>
   );
