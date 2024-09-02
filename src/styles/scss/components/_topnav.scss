@@ -46,6 +46,7 @@
       cursor: pointer;
     }
   }
+  
 
   @media (max-width: 768px) {
     flex-wrap: wrap;
@@ -80,3 +81,25 @@
     }
   }
 }
+.top-nav {
+  .hamburger-menu {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-right: 1rem;
+
+    @media (max-width: 1200px) {
+      display: block;
+    }
+  }
+}
+
+.sidenav {
+  transition: transform 0.3s ease;
+  transform: translateX(0);
+
+  &.open {
+    transform: translateX(0);
+  }
+}
+

@@ -91,6 +91,18 @@ const Widgets = () => {
                     Previous
                   </Button>
                 </div>
+                <div>
+                  <small>Extra Larger Button</small>
+                  <Button type="button"  size="md" bdRadius="10px" width="400px">
+                    Sign Up
+                  </Button>
+                </div>
+                <div>
+                  <small>Secondary Btn</small>
+                  <Button type="button" btn="secondary" size="md" startIcon={<CiCalendar />} bdRadius="7px">
+                    Secondary btn
+                  </Button>
+                </div>
               </div>
               <div class="my-5">
                 <h2 class="mb-4">Button Component Docs</h2>
