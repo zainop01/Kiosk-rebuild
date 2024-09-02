@@ -1,8 +1,7 @@
 @use "../common" as *;
 @use "../helper" as *;
 
-.side-nav {
-    // border: 1px solid red;
+.sidenav {
   width: 300px;
   height: calc(100vh - 13%);
   background-color: #fff;
@@ -13,49 +12,46 @@
   flex-direction: column;
   justify-content: space-between;
   position: fixed;
-  top: 11%;
+  top: 13%;
   left: 1%;
   overflow-y: auto;
   overflow-x: hidden;
+  transition: all 0.3s ease; // Smooth transition for sidebar changes
 
+  .close-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 11;
+  }
+
+  // Custom scrollbar styling
   ::-webkit-scrollbar {
-    width: 6px; 
-    height: 6px; 
+    width: 6px;
+    height: 6px;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: rgba(0, 0, 0, 0.2); 
+    background: rgba(0, 0, 0, 0.2);
     border-radius: 10px;
   }
 
   ::-webkit-scrollbar-track {
-    background: transparent; /* Invisible track */
+    background: transparent;
   }
 
-  /* Hide scrollbar initially */
   &::-webkit-scrollbar {
     opacity: 0;
   }
 
-  /* Show scrollbar on scroll */
   &:hover::-webkit-scrollbar {
     opacity: 1;
   }
-}
 
-.active-class {
-  background-color: $blue-3ca;
-  color: white !important;
-
-  i {
-    color: white !important;
-  }
-}
-
-.profile-section {
-    // text-align: center;
+  .profile-section {
     margin-bottom: 2rem;
-    // padding-top: 2rem; // Optional: Adds some space at the top
 
     .profile-image {
       width: 40px;
@@ -72,35 +68,128 @@
     }
 
     .profile-role {
-      font-size: 0.85rem;
       font-size: $font-size-xxs;
       color: $blue-3ca;
     }
   }
 
-.menu-items {
-  flex-grow: 1;
-  color: $grey-434;
+  ul {
+    flex-grow: 1;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 
-  .menu-item {
-    border-radius: 50px;
-    display: flex;
-    align-items: center;
-    padding: 0.4rem 1.5rem;
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    margin-bottom: 0.5rem;
+    li {
+      margin-bottom: 5px;
 
-    &:hover {
-      // Add hover effects if needed
+      .sidenav-item {
+        width: 265px;
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+        padding: 0.250rem 1.5rem;
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+        position: relative;
+        transition: background-color 0.3s ease, color 0.3s ease,
+          padding 0.3s ease;
+        cursor: pointer;
+
+        &.active {
+          background-color: $blue-3ca;
+          color: #fff;
+          font-weight: bold;
+
+          i {
+            color: #fff;
+          }
+        }
+      }
+
+      i {
+        margin-right: 10px;
+        position: relative;
+        bottom: 2px;
+        color: $blue-3ca;
+        transition: color 0.3s ease;
+      }
     }
+  }
 
-    i {
-      margin-right: 10px;
-      margin-bottom: 4px;
-      color: $blue-3ca;
+  // Media query for responsiveness
+  @media (max-width: 1200px) {
+    margin: 20px;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    border-radius: 0;
+    transform: translateX(-120%);
+    z-index: 1000;
+
+    &.open {
+      transform: translateX(0);
     }
   }
 }
 
+// Submenu styles
+.sidenav-submenu {
+  padding-left: 20px;
+  list-style: none;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.6s ease, opacity 0.6s ease; // Smooth transition
+
+  &.open {
+    max-height: 1000px; // Large enough to fit all content
+    opacity: 1;
+  }
+
+  li {
+    margin-bottom: 5px;
+
+    a {
+      text-decoration: none;
+      color: #666;
+      padding: 5px 0;
+      display: block;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $blue-3ca;
+      }
+
+      &.active {
+        color: $blue-3ca;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+// Collapse icon styles
+.collapse-icon {
+  transition: transform 0.5s ease-in-out; // Smooth transition for the arrow
+  transform: rotate(0deg); // Initial state
+}
+
+.sidenav-item.active .collapse-icon {
+  transform: rotate(180deg); // Rotate the arrow when the section is open
+}
+.sidebar-overlay {
+  display: none; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9;
+}
+
+.sidenav.open + .sidebar-overlay {
+  display: block;
+}

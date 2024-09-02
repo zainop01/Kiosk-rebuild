@@ -17,7 +17,6 @@
     //   text-align: center;
     //   width: 18.3rem;
       padding: 0px 35px;
-      border-radius: 50px;
       letter-spacing: 1px;
       @include fontstyle(14px, 600, auto);
       i {
@@ -30,7 +29,6 @@
       letter-spacing: 1px;
       height: 37px;
       padding: 0px 15px;
-      border-radius: 50px;
       @include fontstyle(12px, 600, auto);
       i {
         font-size: 18px;
@@ -42,7 +40,6 @@
       letter-spacing: 1px;
       height: 25px;
       padding: 0px 10px;
-      border-radius: 4px;
       @include fontstyle(12px, 600, auto);
       i {
         font-size: 13px;
@@ -68,12 +65,12 @@
       @include hover($white, $blue-3ca);
     }
   }
-//   // secondary-btn-fill
-//   .btn_secondary.btn_fill {
-//     background-color: $blue-medium;
-//     color: $white;
-//     &:hover {
-//       background-color: $blue-dark ;
-//     }
-//   }
+  // secondary-btn-fill
+  .btn_secondary.btn_fill {
+    background-color: #F4F7FE;
+    color: $grey-b3b;
+    &:hover {
+      background-color: #F4F7FE;
+    }
+  }
   

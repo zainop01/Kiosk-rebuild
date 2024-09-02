@@ -13,16 +13,18 @@ export default function Button({
   title = "",
   disabled = false,
   styles,
+  width = 'auto',
+  bdRadius = '30px'
 }) {
   return (
     <>
       <button
         type={type}
-        className={`button btn_${size} btn_${variant} btn_${btn} d-flex align-items-center ${align} ${classes}`}
+        className={`button btn_${size} btn_${variant} btn_${btn} d-flex align-items-center justify-content-center ${align} ${classes}`}
         onClick={onClick}
         title={title}
         disabled={disabled}
-        style={styles}
+        style={{...styles , width: width , borderRadius: bdRadius }}
       >
         {startIcon && <i>{startIcon}</i>} {children}
       </button>
