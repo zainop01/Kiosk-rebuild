@@ -7,9 +7,10 @@
   justify-content: space-between;
   padding: 0.9rem 1.25rem;
   background-color: #fff;
-  filter: drop-shadow(14px 17px 40px rgba(0, 0, 0, 0.10));
+  filter: drop-shadow(14px 17px 40px rgba(0, 0, 0, 0.1));
   position: fixed;
   left: 0;
+  z-index: 999;
   top: 0;
   width: 100%;
   .brand {
@@ -46,7 +47,6 @@
       cursor: pointer;
     }
   }
-  
 
   @media (max-width: 768px) {
     flex-wrap: wrap;
@@ -102,4 +102,3 @@
     transform: translateX(0);
   }
 }
-

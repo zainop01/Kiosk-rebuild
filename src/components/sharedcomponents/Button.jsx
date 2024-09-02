@@ -13,8 +13,8 @@ export default function Button({
   title = "",
   disabled = false,
   styles,
-  width = 'auto',
-  bdRadius = '30px'
+  width = "auto",
+  bdRadius = "30px",
 }) {
   return (
     <>
@@ -24,7 +24,7 @@ export default function Button({
         onClick={onClick}
         title={title}
         disabled={disabled}
-        style={{...styles , width: width , borderRadius: bdRadius }}
+        style={{ ...styles, width: width, borderRadius: bdRadius }}
       >
         {startIcon && <i>{startIcon}</i>} {children}
       </button>
