@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 import { Field, ErrorMessage } from "formik";
 import { BsEye, BsEyeSlash } from "react-icons/bs";
 import ToggleSwitch from "./ToggleSwitch";
@@ -95,3 +96,29 @@ export default function InputField({
     </div>
   );
 }
+
+InputField.propTypes = {
+  behave: PropTypes.oneOf(["formik", "native"]),
+  type: PropTypes.string,
+  onChange: PropTypes.func,
+  onFocus: PropTypes.func,
+  onBlur: PropTypes.func,
+  label: PropTypes.string,
+  name: PropTypes.string.isRequired,
+  formik: PropTypes.object, // Change from bool to object
+  placeholder: PropTypes.string,
+  disabled: PropTypes.bool,
+  size: PropTypes.string,
+  margin: PropTypes.string,
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool]),
+  defaultValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool]),
+  styles: PropTypes.object,
+  min: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  max: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  step: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  readOnly: PropTypes.bool,
+  variant: PropTypes.string,
+  classes: PropTypes.string,
+  borderRadius: PropTypes.string,
+  isToggle: PropTypes.bool,
+};
