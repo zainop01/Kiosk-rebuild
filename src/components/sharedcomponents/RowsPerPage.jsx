@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const RowsPerPage = ({ rowsPerPage, options, onRowsPerPageChange }) => {
   return (
@@ -17,6 +18,12 @@ const RowsPerPage = ({ rowsPerPage, options, onRowsPerPageChange }) => {
       </select>
     </div>
   );
+};
+
+RowsPerPage.propTypes = {
+  rowsPerPage: PropTypes.number.isRequired,
+  options: PropTypes.arrayOf(PropTypes.number).isRequired,
+  onRowsPerPageChange: PropTypes.func.isRequired,
 };
 
 export default RowsPerPage;

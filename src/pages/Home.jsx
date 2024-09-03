@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 const Home = () => {
+  // throw new Error("Intentional error for testing ErrorBoundary");
   return (
     <div>
       <h1>Home Page</h1>

@@ -3,7 +3,7 @@
 
 .sidenav {
   width: 300px;
-  height: calc(100vh - 13%);
+  height: calc(96vh - 90px);
   background-color: #fff;
   padding: 20px 15px;
   box-shadow: 13.776px 16.728px 39.36px 3.936px rgba(112, 144, 176, 0.08);
@@ -12,12 +12,14 @@
   flex-direction: column;
   justify-content: space-between;
   position: fixed;
-  top: 13%;
-  left: 1%;
+  top: 105px;
+  left: 20px;
+  // margin-bottom: 300px;
+  // bottom: 200px;
   z-index: 9999;
   overflow-y: auto;
   overflow-x: hidden;
-  transition: all 0.3s ease; // Smooth transition for sidebar changes
+  transition: all 0.3s ease;
 
   .close-icon {
     position: absolute;
@@ -28,7 +30,7 @@
     z-index: 11;
   }
 
-  // Custom scrollbar styling
+
   ::-webkit-scrollbar {
     width: 6px;
     height: 6px;
@@ -119,7 +121,6 @@
     }
   }
 
-  // Media query for responsiveness
   @media (max-width: 1200px) {
     margin: 20px;
     top: 0;
@@ -135,17 +136,17 @@
   }
 }
 
-// Submenu styles
+
 .sidenav-submenu {
   padding-left: 20px;
   list-style: none;
   max-height: 0;
   opacity: 0;
   overflow: hidden;
-  transition: max-height 0.6s ease, opacity 0.6s ease; // Smooth transition
+  transition: max-height 0.6s ease, opacity 0.6s ease;
 
   &.open {
-    max-height: 1000px; // Large enough to fit all content
+    max-height: 1000px; 
     opacity: 1;
   }
 
@@ -171,15 +172,15 @@
   }
 }
 
-// Collapse icon styles
+
 .collapse-icon {
-  transition: transform 0.5s ease-in-out; // Smooth transition for the arrow
-  transform: rotate(0deg); // Initial state
+  transition: transform 0.5s ease-in-out; 
+  transform: rotate(0deg);
 }
 
-.sidenav-item.active .collapse-icon {
-  transform: rotate(180deg); // Rotate the arrow when the section is open
-}
+// .sidenav-item.active .collapse-icon {
+//   transform: rotate(180deg);
+// }
 .sidebar-overlay {
   display: none;
   position: fixed;

@@ -110,8 +110,8 @@ const Widgets = () => {
                   </Button>
                 </div>
               </div>
-              <div class="my-5">
-                <h2 class="mb-4">Button Component Docs</h2>
+              <div className="my-5">
+                <h2 className="mb-4">Button Component Docs</h2>
 
                 <p>
                   The <code>Button</code> component is a flexible UI element
@@ -119,8 +119,8 @@ const Widgets = () => {
                   detailed guide to each prop and example usage.
                 </p>
 
-                <table class="table table-bordered">
-                  <thead class="table-light">
+                <table className="table table-bordered">
+                  <thead className="table-light">
                     <tr>
                       <th>Prop</th>
                       <th>Type</th>
@@ -275,7 +275,7 @@ const Widgets = () => {
                   </tbody>
                 </table>
 
-                <p class="mt-4">
+                <p className="mt-4">
                   This documentation should help developers quickly understand
                   how to use and customize the <code>Button</code> component in
                   their projects.
@@ -355,8 +355,8 @@ const Widgets = () => {
                   voluptate placeat? Amet qui, odit quisquam ratione dolore
                   quasi quidem, quas dolorem autem debitis consequatur?
                 </Typography>
-                <div class="my-5">
-                  <h2 class="mb-4">Typography Component Docs</h2>
+                <div className="my-5">
+                  <h2 className="mb-4">Typography Component Docs</h2>
 
                   <p>
                     This documentation provides a detailed guide on the
@@ -366,8 +366,8 @@ const Widgets = () => {
                     across the application.
                   </p>
 
-                  <table class="table table-bordered">
-                    <thead class="table-light">
+                  <table className="table table-bordered">
+                    <thead className="table-light">
                       <tr>
                         <th>Class</th>
                         <th>Font Size</th>
@@ -557,8 +557,8 @@ const Widgets = () => {
                   </Form>
                 )}
               </Formik>
-              <div class=" my-5">
-                <h1 class="mb-4">InputField Component Docs</h1>
+              <div className=" my-5">
+                <h1 className="mb-4">InputField Component Docs</h1>
 
                 <p>
                   This documentation covers the usage and customization of the{" "}
@@ -568,8 +568,8 @@ const Widgets = () => {
                 </p>
 
                 <h2>Props</h2>
-                <table class="table table-bordered">
-                  <thead class="table-light">
+                <table className="table table-bordered">
+                  <thead className="table-light">
                     <tr>
                       <th>Prop</th>
                       <th>Type</th>
@@ -830,8 +830,8 @@ const Widgets = () => {
                 itemsPerPage={itemsPerPage}
                 onPageChange={handlePageChange}
               />
-              <div class="my-5">
-                <h2 class="mb-4">Pagination Component Docs</h2>
+              <div className="my-5">
+                <h2 className="mb-4">Pagination Component Docs</h2>
                 <p>
                   This documentation provides a guide on using the{" "}
                   <code>Pagination</code> component in your project. This
@@ -840,8 +840,8 @@ const Widgets = () => {
                 </p>
 
                 <h2>Props</h2>
-                <table class="table table-bordered">
-                  <thead class="table-light">
+                <table className="table table-bordered">
+                  <thead className="table-light">
                     <tr>
                       <th>Prop</th>
                       <th>Type</th>
@@ -898,8 +898,8 @@ const Widgets = () => {
                 onRowsPerPageChange={handleRowsPerPageChange}
               />
 
-              <div class=" my-5">
-                <h2 class="mb-4">RowsPerPage Component Docs</h2>
+              <div className=" my-5">
+                <h2 className="mb-4">RowsPerPage Component Docs</h2>
                 <p>
                   This documentation provides a guide on using the{" "}
                   <code>RowsPerPage</code> component, which allows users to
@@ -908,8 +908,8 @@ const Widgets = () => {
                 </p>
 
                 <h2>Props</h2>
-                <table class="table table-bordered">
-                  <thead class="table-light">
+                <table className="table table-bordered">
+                  <thead className="table-light">
                     <tr>
                       <th>Prop</th>
                       <th>Type</th>

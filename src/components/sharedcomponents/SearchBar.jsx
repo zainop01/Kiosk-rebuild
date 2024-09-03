@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { BsSearch } from "react-icons/bs";
 
 export default function SearchBar({
@@ -26,3 +27,11 @@ export default function SearchBar({
     </div>
   );
 }
+
+SearchBar.propTypes = {
+  placeholder: PropTypes.string,
+  onChange: PropTypes.func,
+  value: PropTypes.string,
+  borderRadius: PropTypes.string,
+  styles: PropTypes.object,
+};

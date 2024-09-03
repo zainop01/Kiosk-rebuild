@@ -9,7 +9,6 @@ const TopNav = ({ kioskName, toggleSidebar }) => {
   return (
     <div className="top-nav">
       <div className="brand">
-        <FaBars className="hamburger-menu" onClick={toggleSidebar} /> {/* Hamburger Menu */}
         <img src={logo} className="logo m-0 p-0" alt="Logo" />
         <span className="brand-name">{kioskName}</span>
       </div>
@@ -20,6 +19,7 @@ const TopNav = ({ kioskName, toggleSidebar }) => {
         <BsBell size={15} className="icon" />
         <BsFillMoonFill size={15} className="icon" />
         <BsInfoCircle size={15} className="icon" />
+        <FaBars className="hamburger-menu ms-4" onClick={toggleSidebar} />
         <img src={profileImage} alt="Profile" className="profile-image" />
       </div>
     </div>
