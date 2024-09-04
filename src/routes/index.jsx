@@ -46,7 +46,7 @@ const Routers = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/widgets" element={<Widgets />} />
 
-        {/* Protected Routes */}        
+        {/* Protected Routes */}
         <Route element={<ProtectedRoutes />}>
           <Route element={<Layout />}>
             <Route index path="/" element={<Home />} />
