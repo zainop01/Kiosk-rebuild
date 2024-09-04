@@ -10,7 +10,7 @@ const Login = () => {
   const handleLogin = () => {
     if (username === "sodaClick" && password === "soda123") {
       localStorage.setItem("isLoggedIn", "true");
-      navigate("/"); 
+      navigate("/");
     } else {
       alert("Invalid credentials");
     }
