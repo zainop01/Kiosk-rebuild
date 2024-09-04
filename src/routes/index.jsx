@@ -15,6 +15,9 @@ const Admin = lazy(() => import("../pages/Admin"));
 const Users = lazy(() => import("../pages/Users"));
 const UserReport = lazy(() => import("../pages/UserReport"));
 const Login = lazy(() => import("../pages/Login"));
+const PostsList = lazy(() => import("../pages/TestApiData"));
+
+
 
 const Routers = () => {
   return (
@@ -22,7 +25,7 @@ const Routers = () => {
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/widgets" element={<Widgets />} />
-
+        <Route path="/test/api" element={<PostsList />} />
         {/* Protected Routes */}
         <Route element={<ProtectedRoutes />}>
           <Route element={<Layout />}>

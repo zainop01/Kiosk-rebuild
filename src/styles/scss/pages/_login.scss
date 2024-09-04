@@ -1,0 +1,27 @@
+@use "../common" as *;
+@use "../helper" as *;
+
+
+
+.login-wrapper{
+    p{
+        color: #A3AED0;
+    }
+    .google-login{
+        // border: 1px solid red;
+        border-radius: 16px;
+        padding: 10px 20px;
+        background-color: #F4F7FE;
+        color: $blue-084;
+    }
+    img{
+        width: 30px;
+        margin-right: 10px;
+    }
+    .or-bar{
+        flex: 1;
+        border: .5px solid #E0E4F4;
+        // height: "1px";
+        // background-color: #E0E4F4 ;
+    }
+}

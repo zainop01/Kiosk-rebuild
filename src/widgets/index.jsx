@@ -293,7 +293,7 @@ const Widgets = () => {
               </div>
               <div>
                 <Typography fw="bold" variant="heading-lg" color="txt-primary">
-                  Heading Two - 34PX
+                  Heading Two - 36px
                 </Typography>
               </div>
               <div>
@@ -954,8 +954,218 @@ const Widgets = () => {
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="7" className="w-100">
-            <Accordion.Header>Utilities Classes</Accordion.Header>
-            <Accordion.Body></Accordion.Body>
+            <Accordion.Header>Standards</Accordion.Header>
+            <Accordion.Body>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Category</th>
+                    <th>Standard</th>
+                    <th>Details</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <strong>Code Formatting</strong>
+                    </td>
+                    <td>
+                      <strong>Prettier</strong>
+                    </td>
+                    <td>
+                      All developers must use the Prettier extension for
+                      consistent code formatting.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Code Formatting</strong>
+                    </td>
+                    <td>
+                      <strong>ESLint</strong>
+                    </td>
+                    <td>
+                      Use ESLint for linting JavaScript/React code. The{" "}
+                      <code>eslint.config.js</code> file should define rules.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Naming Conventions</strong>
+                    </td>
+                    <td>
+                      <strong>Variables</strong>
+                    </td>
+                    <td>
+                      Use <code>camelCase</code> for variable names, e.g.,{" "}
+                      <code>userName</code>, <code>totalAmount</code>.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Naming Conventions</strong>
+                    </td>
+                    <td>
+                      <strong>Constants</strong>
+                    </td>
+                    <td>
+                      Use <code>UPPER_SNAKE_CASE</code> for constants, e.g.,{" "}
+                      <code>MAX_USERS</code>, <code>API_BASE_URL</code>.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Naming Conventions</strong>
+                    </td>
+                    <td>
+                      <strong>Functions</strong>
+                    </td>
+                    <td>
+                      Use <code>camelCase</code> for function names, e.g.,{" "}
+                      <code>getUserData</code>, <code>calculateTotal</code>.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Naming Conventions</strong>
+                    </td>
+                    <td>
+                      <strong>Classes/Components</strong>
+                    </td>
+                    <td>
+                      Use <code>PascalCase</code> for React components, e.g.,{" "}
+                      <code>UserProfile</code>, <code>AppHeader</code>.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>File Naming</strong>
+                    </td>
+                    <td>
+                      <strong>JavaScript/JSX Files</strong>
+                    </td>
+                    <td>
+                      Use <code>PascalCase</code> for component files, e.g.,{" "}
+                      <code>UserProfile.jsx</code>, <code>MainPage.jsx</code>.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>File Naming</strong>
+                    </td>
+                    <td>
+                      <strong>Stylesheets</strong>
+                    </td>
+                    <td>
+                      Use kebab-case for SCSS/CSS files, e.g.,{" "}
+                      <code>main-styles.scss</code>,{" "}
+                      <code>button-styles.scss</code>.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Folder Structure</strong>
+                    </td>
+                    <td>
+                      <strong>Components</strong>
+                    </td>
+                    <td>
+                      Place all React components under a <code>components</code>{" "}
+                      directory.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Folder Structure</strong>
+                    </td>
+                    <td>
+                      <strong>Assets</strong>
+                    </td>
+                    <td>
+                      Store images, fonts, and other assets in an{" "}
+                      <code>assets</code> directory.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>CSS/SCSS</strong>
+                    </td>
+                    <td>
+                      <strong>BEM Naming</strong>
+                    </td>
+                    <td>
+                      Follow the BEM (Block, Element, Modifier) naming
+                      convention for classes in SCSS/CSS.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>CSS/SCSS</strong>
+                    </td>
+                    <td>
+                      <strong>Variables</strong>
+                    </td>
+                    <td>
+                      Define SCSS variables in <code>utils/_variable.scss</code>{" "}
+                      and use them across stylesheets.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>CSS/SCSS</strong>
+                    </td>
+                    <td>
+                      <strong>Mixins</strong>
+                    </td>
+                    <td>
+                      Use SCSS mixins for reusable styles in{" "}
+                      <code>utils/_mixins.scss</code>.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Version Control</strong>
+                    </td>
+                    <td>
+                      <strong>.gitignore</strong>
+                    </td>
+                    <td>
+                      Ensure that sensitive or unnecessary files (like{" "}
+                      <code>node_modules</code>, <code>.env</code>,{" "}
+                      <code>dist</code>) are listed in <code>.gitignore</code>.
+                    </td>
+                  </tr>
+    
+                  <tr>
+                    <td>
+                      <strong>Testing</strong>
+                    </td>
+                    <td>
+                      <strong>Unit Tests</strong>
+                    </td>
+                    <td>
+                      Write unit tests for components and functions, preferably
+                      using Jest or a similar testing framework.
+                    </td>
+                  </tr>
+                
+                  <tr>
+                    <td>
+                      <strong>Dependencies</strong>
+                    </td>
+                    <td>
+                      <strong>Package Management</strong>
+                    </td>
+                    <td>
+                      Use <code>npm</code> consistently
+                      across the team. Ensure that{" "}
+                      <code>package-lock.json</code> 
+                      is committed.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </Accordion.Body>
           </Accordion.Item>
         </Accordion>
       </div>

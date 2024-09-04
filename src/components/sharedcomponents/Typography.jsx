@@ -2,22 +2,21 @@ import React from "react";
 import PropTypes from "prop-types";
 
 export default function Typography({
-  variant = "h1",
+  variant = "",
   fw = "normal",
   color = "",
   align = "",
   style = {},
   children,
 }) {
-  const Tag = variant; 
 
   return (
-    <Tag
-      className={`fw-${fw} ${color} ${align}`}
+    <h1
+      className={`fw-${fw} ${color} ${align} ${variant}`}
       style={style}
     >
       {children}
-    </Tag>
+    </h1>
   );
 }
 

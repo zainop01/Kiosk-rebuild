@@ -48,7 +48,7 @@ export default function InputField({
           <div className={`input-wrapper`}>
             {behave === "formik" ? (
               <Field
-                type={showPassword ? "text" : type}
+                type={showPassword && type === "password" ? "text" : type}
                 name={name}
                 placeholder={placeholder}
                 disabled={disabled}
@@ -105,7 +105,7 @@ InputField.propTypes = {
   onBlur: PropTypes.func,
   label: PropTypes.string,
   name: PropTypes.string.isRequired,
-  formik: PropTypes.object, // Change from bool to object
+  formik: PropTypes.object, // Should be an object, not a boolean
   placeholder: PropTypes.string,
   disabled: PropTypes.bool,
   size: PropTypes.string,
