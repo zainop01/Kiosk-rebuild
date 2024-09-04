@@ -152,7 +152,7 @@
   .sidenav-footer {
     margin-top: auto;
     padding-top: 10px;
-    border-top: 1px solid #ddd;
+    // border-top: 1px solid #ddd;
     // text-align: center;
     margin-top: 20px;
     font-size: 10px;
@@ -172,6 +172,9 @@
       &:hover {
         color: darken($blue-3ca, 10%);
       }
+    }
+    @media (max-width: 1200px) {
+     margin-bottom: 30px;
     }
   }
 }

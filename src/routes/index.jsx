@@ -11,7 +11,6 @@ const Users = lazy(() => import("../pages/Users"));
 const UserReport = lazy(() => import("../pages/UserReport"));
 const Login = lazy(() => import("../pages/Login"));
 const PostsList = lazy(() => import("../pages/TestApiData"));
-const InterceptorTest = lazy(() => import("../pages/TestInterceptor"));
 
 
 
@@ -50,7 +49,6 @@ const Routers = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/widgets" element={<Widgets />} />
         <Route path="/test/api" element={<PostsList />} />
-        <Route path="/test/interceptor" element={<InterceptorTest />} />
         {/* Protected Routes */}
         <Route element={<ProtectedRoutes />}>
           <Route element={<Layout />}>
